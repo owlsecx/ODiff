@@ -18,13 +18,18 @@
 
 ## 📌 Overview
 
-Compare hashes, keys, certs, binary files, encoded data.
+ODiff compares hashes, keys, certificates, binaries, and encoded blobs at byte, bit, and character granularity. It emphasises timing-safe comparison, Hamming distance, entropy, and similarity scoring so crypto and forensics reviews can quantify how two artefacts differ. Structured JSON reports support audit documentation.
 
 ---
 
 ## ✨ Features
 
-- Crypto Diff & Comparison Tool (Hashes, Files, Binary)
+- Compare hashes, keys, certs, binary files, and encoded data side by side
+- Byte-, bit-, and character-level difference highlighting
+- Timing-safe comparison helpers for secret material checks
+- Hamming distance, entropy analysis, and similarity scoring
+- Non-interactive --cli mode for two-file comparisons
+- JSON report output and optional auto-save for evidence packs
 
 ---
 
@@ -38,7 +43,10 @@ Compare hashes, keys, certs, binary files, encoded data.
 ## 🚀 Usage
 
 ```bash
-./ODiff
+./ODiff --cli file_a.bin file_b.bin
+./ODiff --cli a.pem b.pem --json
+./ODiff --cli left.bin right.bin --save --json
+./ODiff --help
 ```
 
 ---
